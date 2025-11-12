@@ -1,5 +1,5 @@
 {
-  "name": "ai-sdk-tool-package-template",
+  "name": "ai-sdk-tool-as-package-template",
   "version": "1.0.0",
   "description": "AI SDK tool package template",
   "type": "module",
