@@ -61,6 +61,8 @@ pnpm build
 
 ### Publishing
 
+Before publishing, update the package name in `package.json` to your desired package name.
+
 The package automatically builds before publishing:
 
 ```bash
