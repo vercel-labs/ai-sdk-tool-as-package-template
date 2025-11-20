@@ -9,10 +9,10 @@ importers:
   .:
     dependencies:
       ai:
-        specifier: ^5.0.92
+        specifier: ^5.0.0
         version: 5.0.92(zod@4.1.12)
       zod:
-        specifier: ^4.1.12
+        specifier: ^4.0.0
         version: 4.1.12
     devDependencies:
       '@types/node':
