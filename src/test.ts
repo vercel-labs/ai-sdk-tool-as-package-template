@@ -1,12 +1,12 @@
 import { gateway, generateText, stepCountIs } from "ai";
-import { weatherTool } from "./index";
+import { getWeather } from "./index";
 
 async function main() {
   const result = await generateText({
     model: gateway("openai/gpt-4o-mini"),
     prompt: "What's the weather like in San Francisco?",
     tools: {
-      weatherTool,
+      getWeather: getWeather({ unit: "Celsius" }),
     },
     stopWhen: stepCountIs(5),
   });

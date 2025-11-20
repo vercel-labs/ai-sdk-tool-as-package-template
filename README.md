@@ -11,15 +11,36 @@ npm install ai-sdk-tool-as-package-template
 ## Usage
 
 ```typescript
-import { weatherTool } from "ai-sdk-tool-as-package-template";
-import { generateText } from "ai";
-import { openai } from "@ai-sdk/openai";
+import { getWeather } from "ai-sdk-tool-as-package-template";
+import { generateText, gateway } from "ai";
 
 const result = await generateText({
-  model: openai("gpt-4o-mini"),
-  prompt: "What's the weather like?",
+  model: gateway("openai/gpt-4o-mini"),
+  prompt: "What's the weather like in San Francisco?",
   tools: {
-    weatherTool,
+    getWeather: getWeather({ unit: "Celsius" }),
+  },
+});
+```
+
+### Options
+
+The `getWeather` tool accepts an optional configuration object:
+
+```typescript
+type WeatherToolOptions = {
+  unit?: "Fahrenheit" | "Celsius";
+};
+```
+
+**Example with Fahrenheit:**
+
+```typescript
+const result = await generateText({
+  model: gateway("openai/gpt-4o-mini"),
+  prompt: "What's the weather like in San Francisco?",
+  tools: {
+    getWeather: getWeather({ unit: "Fahrenheit" }),
   },
 });
 ```
