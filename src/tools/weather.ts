@@ -2,14 +2,14 @@ import { tool } from "ai";
 import { z } from "zod";
 
 type WeatherToolOptions = {
-  unit?: "Fahrenheit" | "Celsius";
+  unit?: "fahrenheit" | "celsius";
 };
 
 /**
  * Example weather tool for AI SDK
  * Replace this with your own tool implementation
  */
-export const getWeather = ({ unit = "Celsius" }: WeatherToolOptions = {}) =>
+export const getWeather = ({ unit = "celsius" }: WeatherToolOptions = {}) =>
   tool({
     description: "Get the current weather for a location",
     inputSchema: z.object({
@@ -19,7 +19,7 @@ export const getWeather = ({ unit = "Celsius" }: WeatherToolOptions = {}) =>
     }),
     execute: async ({ location }) => {
       // Replace with actual weather API call
-      const temperature = unit === "Celsius" ? 22 : 72;
+      const temperature = unit === "celsius" ? 22 : 72;
       return {
         location,
         temperature,

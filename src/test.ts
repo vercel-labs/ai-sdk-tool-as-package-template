@@ -6,7 +6,7 @@ async function main() {
     model: gateway("openai/gpt-4o-mini"),
     prompt: "What's the weather like in San Francisco?",
     tools: {
-      getWeather: getWeather({ unit: "Celsius" }),
+      getWeather: getWeather({ unit: "celsius" }),
     },
     stopWhen: stepCountIs(5),
   });
