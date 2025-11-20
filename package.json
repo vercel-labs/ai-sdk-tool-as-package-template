@@ -1,6 +1,6 @@
 {
   "name": "ai-sdk-tool-as-package-template",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "AI SDK tool package template",
   "type": "module",
   "main": "./dist/index.js",
@@ -35,8 +35,8 @@
     "tsx": "^4.20.6",
     "typescript": "^5.9.3"
   },
-  "dependencies": {
-    "ai": "^5.0.92",
-    "zod": "^4.1.12"
+  "peerDependencies": {
+    "ai": "^5.0.0",
+    "zod": "^4.0.0"
   }
 }
